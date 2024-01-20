@@ -1,0 +1,74 @@
+@import './reset';
+
+
+// variables 
+$primary-color: #f2f2f2;
+$background-color: #ccc;
+$text-color: #f53a3a;
+
+// map-arrey 
+$font-size:(
+    "desktop": 60px,
+    "mobile": 12px,
+    "tabtel": 18px
+);
+
+// function 
+@function size($wei-name){
+    @return map-get($f: , $key: )
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: $background-color;
+}
+p{
+    font-size: 20px;
+    font-weight: 400;
+    color: $text-color;
+    font-size: map-get($font-size, tablet);
+}
+
+// Nesting in sass 
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    height: 80px;
+    background-color: $text-color;
+    .navbar{
+        max-width: 80%;
+        margin: auto;
+        height: 100%;
+        display: grid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo a{
+            font-size: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            list-style: none;
+            color: $primary-color;
+        }
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    padding: 8px 16px;
+                    color: $primary-color;
+                    font-size: map-get($font-size, tablet);
+                    &:hover{
+                        color: #65ed3b;
+                    }
+                }
+            }
+        }
+    }
+}
