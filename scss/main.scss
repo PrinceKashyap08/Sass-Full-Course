@@ -13,10 +13,17 @@ $font-size:(
     "tabtel": 18px
 );
 
-// function 
-@function size($wei-name){
-    @return map-get($f: , $key: )
+// mixin 
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
 }
+
+// .class{
+//     @include flexCenter(column);
+// }
 
 
 body{
